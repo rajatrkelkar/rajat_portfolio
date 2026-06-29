@@ -78,11 +78,16 @@
   .topnav{
     position:fixed;top:0;left:0;right:0;z-index:20;
     height:72px;
-    display:flex;align-items:center;justify-content:space-between;
-    padding:0 40px;
     background:var(--bg-translucent);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--border);
+  }
+  .topnav-inner{
+    height:100%;
+    max-width:1180px;
+    margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 40px;
   }
   .brand{
     font-family:var(--mono);
@@ -163,7 +168,7 @@
   .nav-toggle{display:none;}
 
   /* ===== main content ===== */
-  main{padding:0 56px 120px;max-width:980px;margin:0 auto;}
+  main{padding:0 56px 120px;max-width:1180px;margin:0 auto;}
   section{padding-top:96px;}
   .eyebrow{
     font-family:var(--mono);font-size:12px;color:var(--accent);
@@ -254,9 +259,9 @@
   }
   .report-footer .seg{display:flex;gap:14px;flex-wrap:wrap;}
 
-  .hero-sub{max-width:560px;color:var(--text-muted);font-size:15.5px;}
+  .hero-sub{color:var(--text-muted);font-size:15.5px;}
 
-  .status-badges{display:flex;flex-direction:column;gap:8px;align-items:flex-start;max-width:560px;}
+  .status-badges{display:flex;flex-direction:column;gap:8px;align-items:flex-start;}
   .status-badge{
     display:inline-flex;align-items:center;gap:9px;
     font-family:var(--mono);font-size:12px;color:var(--text-muted);
@@ -380,7 +385,8 @@
 
   /* ===== mobile nav ===== */
   @media (max-width: 880px){
-    .topnav{padding:0 18px;height:64px;}
+    .topnav{height:64px;}
+    .topnav-inner{padding:0 18px;}
     .navlinks{
       display:none;
       position:fixed;top:64px;left:0;right:0;
@@ -468,30 +474,32 @@
 <div class="grid-bg"></div>
 
 <nav class="topnav">
-  <div class="brand">
-    <span class="name">Rajat Kelkar</span>
-  </div>
-
-  <div class="navlinks" id="navlinks">
-    <a href="javascript:void(0)" data-scroll-to="summary"><span class="tag">01</span>summary</a>
-    <a href="javascript:void(0)" data-scroll-to="experience"><span class="tag">02</span>experience</a>
-    <a href="javascript:void(0)" data-scroll-to="projects"><span class="tag">03</span>projects</a>
-    <a href="javascript:void(0)" data-scroll-to="skills"><span class="tag">04</span>skills</a>
-    <a href="javascript:void(0)" data-scroll-to="education"><span class="tag">05</span>education</a>
-    <a href="javascript:void(0)" data-scroll-to="contact"><span class="tag">06</span>contact</a>
-  </div>
-
-  <div class="topnav-right">
-    <span class="status-dot">open to opportunities</span>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
-      <span class="theme-icon theme-icon-sun">☀</span><span class="theme-icon theme-icon-moon">☾</span>
-    </button>
-    <div class="topnav-icons">
-      <a href="https://www.linkedin.com/in/rajat-kelkar-31977a14a/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
-      <a href="mailto:rajatrkelkar@gmail.com" aria-label="Email" title="Email" class="email-link" data-email="rajatrkelkar@gmail.com">@</a>
-      <a href="Rajat_Kelkar_CV_DA_2026.pdf" download id="resumeLinkSidebar" aria-label="Resume" title="Resume PDF">cv</a>
+  <div class="topnav-inner">
+    <div class="brand">
+      <span class="name">Rajat Kelkar</span>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <div class="navlinks" id="navlinks">
+      <a href="javascript:void(0)" data-scroll-to="summary"><span class="tag">01</span>summary</a>
+      <a href="javascript:void(0)" data-scroll-to="experience"><span class="tag">02</span>experience</a>
+      <a href="javascript:void(0)" data-scroll-to="projects"><span class="tag">03</span>projects</a>
+      <a href="javascript:void(0)" data-scroll-to="skills"><span class="tag">04</span>skills</a>
+      <a href="javascript:void(0)" data-scroll-to="education"><span class="tag">05</span>education</a>
+      <a href="javascript:void(0)" data-scroll-to="contact"><span class="tag">06</span>contact</a>
+    </div>
+
+    <div class="topnav-right">
+      <span class="status-dot">open to opportunities</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+        <span class="theme-icon theme-icon-sun">☀</span><span class="theme-icon theme-icon-moon">☾</span>
+      </button>
+      <div class="topnav-icons">
+        <a href="https://www.linkedin.com/in/rajat-kelkar-31977a14a/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
+        <a href="mailto:rajatrkelkar@gmail.com" aria-label="Email" title="Email" class="email-link" data-email="rajatrkelkar@gmail.com">@</a>
+        <a href="Rajat_Kelkar_CV_DA_2026.pdf" download id="resumeLinkSidebar" aria-label="Resume" title="Resume PDF">cv</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
   </div>
 </nav>
 
