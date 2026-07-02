@@ -5,9 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rajat Kelkar — Data Analyst</title>
 <meta name="description" content="Data Analyst portfolio — Power BI, SQL, Tableau, data governance. 7+ years across financial services, insurance and tech.">
+<meta name="theme-color" content="#0B0E11" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F6F7F8" media="(prefers-color-scheme: light)">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rajat Kelkar — Data Analyst">
+<meta property="og:description" content="Data Analyst portfolio — Power BI, SQL, Tableau, data governance. 7+ years across financial services, insurance and tech.">
+<meta property="og:site_name" content="Rajat Kelkar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rajat Kelkar — Data Analyst">
+<meta name="twitter:description" content="Data Analyst portfolio — Power BI, SQL, Tableau, data governance. 7+ years across financial services, insurance and tech.">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rajat Kelkar",
+  "jobTitle": "Data Analyst",
+  "email": "mailto:rajatrkelkar@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Galway",
+    "addressCountry": "IE"
+  },
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "University of Galway"},
+    {"@type": "CollegeOrUniversity", "name": "KJ Somaiya College of Engineering"}
+  ],
+  "sameAs": ["https://www.linkedin.com/in/rajat-kelkar-31977a14a/"]
+}
+</script>
 <style>
   :root{
     --bg:#0B0E11;
@@ -39,7 +71,7 @@
     --flag:#B8761F;
   }
 
-  body, .topnav, .report, .kpi-card, .summary-panel, .job, .proj-empty,
+  body, .topnav, .report, .kpi-card, .summary-panel, .job,
   .schema-key, .schema-val, .card, .contact-panel, footer, .status-badge{
     transition: background-color .25s ease, border-color .25s ease, color .25s ease;
   }
@@ -323,26 +355,6 @@
   }
   .job-body li strong{color:var(--text);font-weight:600;}
 
-  /* ===== projects (empty state placeholder) ===== */
-  .proj-empty{
-    border:1px dashed var(--border);border-radius:12px;background:var(--panel);
-    padding:40px 40px;text-align:center;
-    display:flex;flex-direction:column;align-items:center;
-  }
-  .proj-empty-icon{
-    font-size:28px;color:var(--text-dim);margin-bottom:18px;
-    width:56px;height:56px;border-radius:10px;
-    background:var(--panel-raised);border:1px solid var(--border);
-    display:flex;align-items:center;justify-content:center;
-  }
-  .proj-empty-title{
-    font-family:var(--mono);font-size:15px;font-weight:600;color:var(--text);
-    margin-bottom:12px;
-  }
-  .proj-empty-body{
-    color:var(--text-muted);font-size:14px;max-width:480px;margin:0 auto;
-  }
-
   /* ===== skills (schema table) ===== */
   .schema-table{width:100%;border:1px solid var(--border);border-radius:10px;overflow:hidden;}
   .schema-row{display:grid;grid-template-columns:200px 1fr;border-bottom:1px solid var(--border);}
@@ -370,6 +382,15 @@
   .cert-list{display:flex;flex-direction:column;gap:10px;}
   .cert-list li{list-style:none;display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--text-muted);}
   .cert-list li::before{content:'✓';color:var(--accent);font-family:var(--mono);font-weight:700;}
+
+  .card-full{grid-column:1 / -1;}
+  .lead-item{margin-bottom:14px;}
+  .lead-item:last-child{margin-bottom:0;}
+  .lead-item .role{font-weight:600;font-size:14.5px;color:var(--text);}
+  .lead-item .org{font-size:13px;color:var(--text-muted);margin-top:2px;}
+  @media (max-width: 880px){
+    .card-full{grid-column:auto;}
+  }
 
   /* ===== contact / footer ===== */
   .contact-panel{
@@ -415,7 +436,6 @@
     .report-bar{padding:12px 16px;}
     .kpi-card{padding:18px 16px 16px;}
     .kpi-card .kpi-value{font-size:30px;}
-    .proj-empty{padding:36px 24px;}
     .twocol{grid-template-columns:1fr;}
     .schema-row{grid-template-columns:1fr;}
     .schema-key{border-right:none;border-bottom:1px solid var(--border);}
@@ -428,6 +448,34 @@
   }
 
   :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  /* ===== skip link (a11y) ===== */
+  .skip-link{
+    position:fixed;top:-60px;left:16px;z-index:100;
+    background:var(--accent);color:#0B0E11;
+    font-family:var(--mono);font-size:12.5px;font-weight:600;
+    padding:10px 16px;border-radius:6px;
+    transition:top .2s;
+  }
+  .skip-link:focus{top:16px;}
+
+  /* ===== back to top ===== */
+  .back-to-top{
+    position:fixed;bottom:28px;right:28px;z-index:40;
+    width:42px;height:42px;border-radius:50%;
+    background:var(--panel-raised);border:1px solid var(--border);
+    color:var(--accent);font-family:var(--mono);font-size:16px;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+    opacity:0;pointer-events:none;transform:translateY(10px);
+    transition:opacity .25s, transform .25s, border-color .15s;
+    box-shadow:0 12px 30px -10px rgba(0,0,0,.5);
+  }
+  .back-to-top.show{opacity:1;pointer-events:auto;transform:translateY(0);}
+  .back-to-top:hover{border-color:var(--accent-dim);}
+  @media (max-width: 880px){
+    .back-to-top{bottom:20px;right:20px;width:38px;height:38px;}
+  }
 
   /* ===== scroll-reveal animation ===== */
   .reveal{
@@ -473,6 +521,8 @@
 
 <div class="grid-bg"></div>
 
+<a href="#top" class="skip-link">Skip to content</a>
+
 <nav class="topnav">
   <div class="topnav-inner">
     <div class="brand">
@@ -482,21 +532,20 @@
     <div class="navlinks" id="navlinks">
       <a href="javascript:void(0)" data-scroll-to="summary"><span class="tag">01</span>summary</a>
       <a href="javascript:void(0)" data-scroll-to="experience"><span class="tag">02</span>experience</a>
-      <a href="javascript:void(0)" data-scroll-to="projects"><span class="tag">03</span>projects</a>
-      <a href="javascript:void(0)" data-scroll-to="skills"><span class="tag">04</span>skills</a>
-      <a href="javascript:void(0)" data-scroll-to="education"><span class="tag">05</span>education</a>
-      <a href="javascript:void(0)" data-scroll-to="contact"><span class="tag">06</span>contact</a>
+      <a href="javascript:void(0)" data-scroll-to="skills"><span class="tag">03</span>skills</a>
+      <a href="javascript:void(0)" data-scroll-to="education"><span class="tag">04</span>education</a>
+      <a href="javascript:void(0)" data-scroll-to="contact"><span class="tag">05</span>contact</a>
     </div>
 
     <div class="topnav-right">
       <span class="status-dot">open to opportunities</span>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" aria-pressed="false" title="Toggle theme">
         <span class="theme-icon theme-icon-sun">☀</span><span class="theme-icon theme-icon-moon">☾</span>
       </button>
       <div class="topnav-icons">
-        <a href="https://www.linkedin.com/in/rajat-kelkar-31977a14a/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
+        <a href="https://www.linkedin.com/in/rajat-kelkar-31977a14a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">in</a>
         <a href="mailto:rajatrkelkar@gmail.com" aria-label="Email" title="Email" class="email-link" data-email="rajatrkelkar@gmail.com">@</a>
-        <a href="Rajat_Kelkar_CV_DA_2026.pdf" download id="resumeLinkSidebar" aria-label="Resume" title="Resume PDF">cv</a>
+        <a href="Rajat_Kelkar_CV_DA_2026.pdf" download aria-label="Resume" title="Resume PDF">cv</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     </div>
@@ -562,8 +611,7 @@
 
       <div class="hero-cta">
         <a href="javascript:void(0)" data-scroll-to="experience" class="btn btn-primary">View Experience ↓</a>
-        <a href="javascript:void(0)" data-scroll-to="projects" class="btn btn-ghost">View Projects ↓</a>
-        <a href="Rajat_Kelkar_CV_DA_2026.pdf" download class="btn btn-ghost" id="resumeLinkHero">Download Résumé</a>
+        <a href="Rajat_Kelkar_CV_DA_2026.pdf" download class="btn btn-ghost">Download Résumé</a>
         <a href="mailto:rajatrkelkar@gmail.com" class="btn btn-ghost email-link" data-email="rajatrkelkar@gmail.com">Email Me</a>
       </div>
     </section>
@@ -603,6 +651,9 @@
             <li>Optimised <strong>data models, DAX measures, and Power Query transformations</strong> for accuracy, performance, and scale.</li>
             <li>Owned data validation, reconciliation, and QA to keep reporting compliant with governance and regulatory requirements.</li>
             <li>Maintained metric inventories, KPI definitions, SOPs, and process flows — the boring documentation that makes audits painless.</li>
+            <li>Analysed large transactional datasets to surface <strong>trends, anomalies, and risk signals</strong>, improving operational efficiency and regulatory reporting accuracy.</li>
+            <li>Built Excel-based dashboards and reporting solutions using <strong>Power Pivot, Power Query, and advanced Pivot Tables</strong> for business and management reporting.</li>
+            <li>Partnered with business and technology stakeholders to gather requirements, manage reporting enhancements, and resolve data issues end to end.</li>
           </ul>
         </div>
       </div>
@@ -617,6 +668,7 @@
             <li>Built <strong>10+ interactive Tableau dashboards</strong> across term, motor, and bike insurance products, surfacing customer behaviour patterns for marketing and sales.</li>
             <li>Queried and transformed large datasets in <strong>Amazon Redshift</strong> using advanced SQL to support strategic decisions across business functions.</li>
             <li>Ran monthly <strong>KPI reporting frameworks</strong> in Tableau and Excel for key stakeholders.</li>
+            <li>Worked within <strong>Agile delivery teams</strong> to support product enhancements, manage reporting requirements, and drive continuous improvement across analytics and operations.</li>
           </ul>
         </div>
       </div>
@@ -631,6 +683,7 @@
             <li>Configured CRM solutions to automate data capture and improve data quality, cutting manual admin effort.</li>
             <li>Mapped workflows with <strong>Bizagi swim-lane diagrams</strong> to pinpoint bottlenecks pre-deployment.</li>
             <li>Oversaw feature migration across UAT, Pre-Production, and Production environments.</li>
+            <li>Gathered and documented requirements with business stakeholders, defined project scope, and developed <strong>work breakdown structures (WBS)</strong> to sharpen delivery timelines.</li>
           </ul>
         </div>
       </div>
@@ -642,7 +695,7 @@
         </div>
         <div class="job-body">
           <ul>
-            <li>Translated business requirements into technical specs for an <strong>inventory management system</strong> across 4 full SDLC projects.</li>
+            <li>Translated business requirements into technical specs for an <strong>inventory management system</strong> across 4 full SDLC projects, from requirements gathering through UAT and deployment, keeping business and technical deliverables in full alignment.</li>
             <li>Created a standardised <strong>FRD template</strong> adopted across business and technical teams.</li>
             <li>Delivered <strong>20+ incremental updates</strong> post-deployment based on user feedback.</li>
             <li>Ran training sessions and wrote user guides, cutting support tickets by <strong>15%</strong>.</li>
@@ -652,21 +705,8 @@
       </div>
     </section>
 
-    <section id="projects">
-      <div class="eyebrow">// 03</div>
-      <h2>Projects</h2>
-
-      <div class="proj-empty">
-        <div class="proj-empty-icon">◧</div>
-        <div class="proj-empty-title">No published reports yet</div>
-        <p class="proj-empty-body">
-          The dashboards I've built are inside confidential systems at Gateway Credit Union and previous employers, so I can't display them on this site.
-        </p>
-      </div>
-    </section>
-
     <section id="skills">
-      <div class="eyebrow">// 04</div>
+      <div class="eyebrow">// 03</div>
       <h2>Skills</h2>
       <div class="schema-table">
         <div class="schema-row">
@@ -709,7 +749,7 @@
     </section>
 
     <section id="education">
-      <div class="eyebrow">// 05</div>
+      <div class="eyebrow">// 04</div>
       <h2>Education & Certifications</h2>
       <div class="twocol">
         <div class="card">
@@ -734,18 +774,28 @@
             <li>Lean Six Sigma Green Belt</li>
           </ul>
         </div>
+        <div class="card card-full">
+          <h4>LEADERSHIP & EXTRACURRICULAR</h4>
+          <div class="lead-item">
+            <div class="role">Vice Auditor, Business Analyst Society — University of Galway</div>
+            <div class="org">Ran analytical workshops for 40+ students and organised seminars with industry speakers.</div>
+          </div>
+          <div class="lead-item">
+            <div class="role">OCM, Indian Society — University of Galway</div>
+            <div class="org">Organised 3 traditional and cultural events for 500+ students over the academic year.</div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="contact">
-      <div class="eyebrow">// 06</div>
+      <div class="eyebrow">// 05</div>
       <div class="contact-panel">
         <h2 style="justify-content:center;display:flex;">Let's talk data.</h2>
         <p>Open to Data Analyst and BI roles in Ireland and remote. If you've got messy data and a deadline, I'd like to hear about it.</p>
         <div class="contact-links">
           <a href="mailto:rajatrkelkar@gmail.com" class="btn btn-primary email-link" data-email="rajatrkelkar@gmail.com">rajatrkelkar@gmail.com</a>
-          <a href="https://www.linkedin.com/in/rajat-kelkar-31977a14a/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
-          <a href="tel:+353872271138" class="btn btn-ghost">+353 87 227 1138</a>
+          <a href="https://www.linkedin.com/in/rajat-kelkar-31977a14a/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn ↗</a>
         </div>
       </div>
     </section>
@@ -756,6 +806,8 @@
   <span>© 2026 Rajat Kelkar · Galway, Ireland</span>
   <span>Built with HTML/CSS/JS · No tracking, no nonsense</span>
 </footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
 
 <script>
   // KPI cards: staggered fade-in, then count up to their target value
@@ -855,6 +907,7 @@
   function applyTheme(mode){
     document.documentElement.setAttribute('data-theme', mode);
     document.body.classList.toggle('theme-light', mode === 'light');
+    themeToggle.setAttribute('aria-pressed', mode === 'light' ? 'true' : 'false');
     // Belt-and-braces: force the body paint directly too, in case any
     // environment fails to recompute custom-property cascades on <html>.
     if(mode === 'light'){
@@ -917,6 +970,17 @@
       clearTimeout(toastTimer);
       toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
     });
+  });
+
+  // Back-to-top button: appears once the visitor has scrolled past the hero
+  const backToTop = document.getElementById('backToTop');
+  const toggleBackToTop = () => {
+    backToTop.classList.toggle('show', window.scrollY > 600);
+  };
+  document.addEventListener('scroll', toggleBackToTop, {passive:true});
+  toggleBackToTop();
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: reduceMotion ? 'auto' : 'smooth'});
   });
 </script>
 
