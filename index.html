@@ -3,18 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rajat Kelkar — Data Analyst</title>
-<meta name="description" content="Data Analyst portfolio — Power BI, SQL, Tableau, data governance. 7+ years across financial services, insurance and tech.">
+<title>Rajat Kelkar · Data Analyst</title>
+<meta name="description" content="Data Analyst portfolio. Power BI, SQL, Tableau, data governance. 7+ years across financial services, insurance and tech.">
 <meta name="theme-color" content="#0B0E11" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#F6F7F8" media="(prefers-color-scheme: light)">
 
+<link rel="canonical" href="https://rajatrkelkar.github.io/rajat_portfolio/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Rajat Kelkar — Data Analyst">
-<meta property="og:description" content="Data Analyst portfolio — Power BI, SQL, Tableau, data governance. 7+ years across financial services, insurance and tech.">
+<meta property="og:url" content="https://rajatrkelkar.github.io/rajat_portfolio/">
+<meta property="og:title" content="Rajat Kelkar · Data Analyst">
+<meta property="og:description" content="Data Analyst portfolio. Power BI, SQL, Tableau, data governance. 7+ years across financial services, insurance and tech.">
 <meta property="og:site_name" content="Rajat Kelkar">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rajat Kelkar — Data Analyst">
-<meta name="twitter:description" content="Data Analyst portfolio — Power BI, SQL, Tableau, data governance. 7+ years across financial services, insurance and tech.">
+<meta property="og:image" content="https://rajatrkelkar.github.io/rajat_portfolio/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rajat Kelkar · Data Analyst. Power BI, SQL Server, Tableau, Data Governance.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rajat Kelkar · Data Analyst">
+<meta name="twitter:description" content="Data Analyst portfolio. Power BI, SQL, Tableau, data governance. 7+ years across financial services, insurance and tech.">
+<meta name="twitter:image" content="https://rajatrkelkar.github.io/rajat_portfolio/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
@@ -355,6 +362,35 @@
   }
   .job-body li strong{color:var(--text);font-weight:600;}
 
+  /* ===== selected work (case studies) ===== */
+  .section-lead{color:var(--text-muted);font-size:15px;margin:-8px 0 24px;max-width:660px;}
+  .case{
+    border:1px solid var(--border);border-radius:10px;background:var(--panel);
+    margin-bottom:18px;overflow:hidden;
+  }
+  .case-head{padding:20px 24px;border-bottom:1px solid var(--border);background:var(--panel-raised);}
+  .case-title{font-family:var(--mono);font-weight:700;font-size:15.5px;color:var(--text);margin-bottom:12px;}
+  .case-tools{display:flex;flex-wrap:wrap;gap:6px;}
+  .case-tools span{
+    font-family:var(--mono);font-size:11px;color:var(--accent);
+    background:var(--accent-dim);border:1px solid #2F5A56;
+    padding:3px 9px;border-radius:5px;
+  }
+  .case-body{padding:20px 24px;display:flex;flex-direction:column;gap:16px;}
+  .case-block{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:start;}
+  .case-block .lbl{
+    font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;
+    color:var(--text-dim);padding-top:3px;
+  }
+  .case-block .txt{color:var(--text-muted);font-size:14.5px;}
+  .case-block .txt strong{color:var(--text);font-weight:600;}
+  .case-impact{display:flex;flex-wrap:wrap;gap:8px;}
+  .case-impact .metric{
+    font-family:var(--mono);font-size:12px;color:var(--accent);
+    background:var(--accent-dim);border:1px solid #2F5A56;
+    padding:5px 11px;border-radius:5px;
+  }
+
   /* ===== skills (schema table) ===== */
   .schema-table{width:100%;border:1px solid var(--border);border-radius:10px;overflow:hidden;}
   .schema-row{display:grid;grid-template-columns:200px 1fr;border-bottom:1px solid var(--border);}
@@ -437,6 +473,8 @@
     .kpi-card{padding:18px 16px 16px;}
     .kpi-card .kpi-value{font-size:30px;}
     .twocol{grid-template-columns:1fr;}
+    .case-block{grid-template-columns:1fr;gap:4px;}
+    .case-block .lbl{padding-top:0;}
     .schema-row{grid-template-columns:1fr;}
     .schema-key{border-right:none;border-bottom:1px solid var(--border);}
     footer{flex-direction:column;gap:6px;padding:24px 20px;}
@@ -532,9 +570,10 @@
     <div class="navlinks" id="navlinks">
       <a href="javascript:void(0)" data-scroll-to="summary"><span class="tag">01</span>summary</a>
       <a href="javascript:void(0)" data-scroll-to="experience"><span class="tag">02</span>experience</a>
-      <a href="javascript:void(0)" data-scroll-to="skills"><span class="tag">03</span>skills</a>
-      <a href="javascript:void(0)" data-scroll-to="education"><span class="tag">04</span>education</a>
-      <a href="javascript:void(0)" data-scroll-to="contact"><span class="tag">05</span>contact</a>
+      <a href="javascript:void(0)" data-scroll-to="work"><span class="tag">03</span>work</a>
+      <a href="javascript:void(0)" data-scroll-to="skills"><span class="tag">04</span>skills</a>
+      <a href="javascript:void(0)" data-scroll-to="education"><span class="tag">05</span>education</a>
+      <a href="javascript:void(0)" data-scroll-to="contact"><span class="tag">06</span>contact</a>
     </div>
 
     <div class="topnav-right">
@@ -556,7 +595,7 @@
   <main>
     <section class="hero" id="top">
       <p class="hero-sub">
-        I'm <strong>Rajat</strong> — a data analyst who turns messy operational data into dashboards people actually trust.
+        I'm <strong>Rajat</strong>, a data analyst who turns messy operational data into dashboards people actually trust.
         7+ years building reporting pipelines and BI systems across <strong>3 countries</strong>,
         spanning <strong>finance, insurance, and tech</strong>,
         with a track record in <strong>AML compliance reporting, data governance, and stakeholder management</strong>.
@@ -572,7 +611,7 @@
         <div class="report-bar">
           <div class="report-bar-left">
             <span class="report-icon">P</span>
-            <span class="report-title">Career Overview — Rajat Kelkar</span>
+            <span class="report-title">Career Overview · Rajat Kelkar</span>
           </div>
           <span class="report-refresh"><span class="refresh-dot"></span>Last refreshed: today</span>
         </div>
@@ -611,6 +650,7 @@
 
       <div class="hero-cta">
         <a href="javascript:void(0)" data-scroll-to="experience" class="btn btn-primary">View Experience ↓</a>
+        <a href="javascript:void(0)" data-scroll-to="work" class="btn btn-ghost">Selected Work ↓</a>
         <a href="Rajat_Kelkar_CV_DA_2026.pdf" download class="btn btn-ghost">Download Résumé</a>
         <a href="mailto:rajatrkelkar@gmail.com" class="btn btn-ghost email-link" data-email="rajatrkelkar@gmail.com">Email Me</a>
       </div>
@@ -620,8 +660,8 @@
       <div class="eyebrow">// 01</div>
       <h2>Summary</h2>
       <div class="summary-panel">
-        <p>I help organisations make sense of large, messy, high-stakes datasets — the kind where a wrong number in a regulatory report isn't a UX bug, it's a compliance problem. Most of my work lives at the intersection of <strong style="color:var(--text)">Power BI, SQL Server, and governance</strong>: building the pipeline, modelling the data correctly, and then making sure the number on the dashboard is one an auditor would sign off on.</p>
-        <p>Before BI, I spent three years as a business/technical analyst translating ambiguous business needs into specs developers could build from — which is probably why I care so much about documentation, SOPs, and KPI definitions that don't quietly drift over time.</p>
+        <p>I help organisations make sense of large, messy, high-stakes datasets, the kind where a wrong number in a regulatory report isn't a UX bug, it's a compliance problem. Most of my work lives at the intersection of <strong style="color:var(--text)">Power BI, SQL Server, and governance</strong>: building the pipeline, modelling the data correctly, and then making sure the number on the dashboard is one an auditor would sign off on.</p>
+        <p>Before BI, I spent three years as a business/technical analyst translating ambiguous business needs into specs developers could build from. That's probably why I care so much about documentation, SOPs, and KPI definitions that don't quietly drift over time.</p>
         <div class="summary-tags">
           <span class="tag-chip">Power BI</span>
           <span class="tag-chip">SQL Server</span>
@@ -641,16 +681,16 @@
 
       <div class="job">
         <div class="job-head">
-          <div class="job-title">Data Analyst — <span class="job-org">Gateway Credit Union</span></div>
-          <div class="job-meta">Oct 2023 — Present · Ireland</div>
+          <div class="job-title">Data Analyst · <span class="job-org">Gateway Credit Union</span></div>
+          <div class="job-meta">Oct 2023 to Present · Ireland</div>
         </div>
         <div class="job-body">
           <ul>
             <li>Designed and maintained <strong>Power BI dashboards</strong> for AML compliance, operational monitoring, and executive reporting, enabling data-driven decisions at leadership level.</li>
-            <li>Built an <strong>end-to-end reporting pipeline</strong> from on-prem SQL Server to Power BI Service via the Microsoft On-Premises Data Gateway — automated refreshes, zero manual exports.</li>
+            <li>Built an <strong>end-to-end reporting pipeline</strong> from on-prem SQL Server to Power BI Service via the Microsoft On-Premises Data Gateway, with automated refreshes and zero manual exports.</li>
             <li>Optimised <strong>data models, DAX measures, and Power Query transformations</strong> for accuracy, performance, and scale.</li>
             <li>Owned data validation, reconciliation, and QA to keep reporting compliant with governance and regulatory requirements.</li>
-            <li>Maintained metric inventories, KPI definitions, SOPs, and process flows — the boring documentation that makes audits painless.</li>
+            <li>Maintained metric inventories, KPI definitions, SOPs, and process flows, the boring documentation that makes audits painless.</li>
             <li>Analysed large transactional datasets to surface <strong>trends, anomalies, and risk signals</strong>, improving operational efficiency and regulatory reporting accuracy.</li>
             <li>Built Excel-based dashboards and reporting solutions using <strong>Power Pivot, Power Query, and advanced Pivot Tables</strong> for business and management reporting.</li>
             <li>Partnered with business and technology stakeholders to gather requirements, manage reporting enhancements, and resolve data issues end to end.</li>
@@ -660,8 +700,8 @@
 
       <div class="job">
         <div class="job-head">
-          <div class="job-title">Data Analyst — <span class="job-org">Coverfox</span></div>
-          <div class="job-meta">Nov 2021 — Jul 2022 · India</div>
+          <div class="job-title">Data Analyst · <span class="job-org">Coverfox</span></div>
+          <div class="job-meta">Nov 2021 to Jul 2022 · India</div>
         </div>
         <div class="job-body">
           <ul>
@@ -675,8 +715,8 @@
 
       <div class="job">
         <div class="job-head">
-          <div class="job-title">Consultant — <span class="job-org">CrmNext</span></div>
-          <div class="job-meta">Jul 2021 — Nov 2021 · India</div>
+          <div class="job-title">Consultant · <span class="job-org">CrmNext</span></div>
+          <div class="job-meta">Jul 2021 to Nov 2021 · India</div>
         </div>
         <div class="job-body">
           <ul>
@@ -690,8 +730,8 @@
 
       <div class="job">
         <div class="job-head">
-          <div class="job-title">Technical Business Analyst — <span class="job-org">Daifuku</span></div>
-          <div class="job-meta">Jul 2018 — Jun 2021 · India/Japan</div>
+          <div class="job-title">Technical Business Analyst · <span class="job-org">Daifuku</span></div>
+          <div class="job-meta">Jul 2018 to Jun 2021 · India/Japan</div>
         </div>
         <div class="job-body">
           <ul>
@@ -705,8 +745,73 @@
       </div>
     </section>
 
-    <section id="skills">
+    <section id="work">
       <div class="eyebrow">// 03</div>
+      <h2>Selected Work</h2>
+      <p class="section-lead">Sanitised case studies, no client data or dashboards, just the problem, what I built, and the outcome. Happy to walk through any of these in detail.</p>
+
+      <div class="case">
+        <div class="case-head">
+          <div class="case-title">Automated AML &amp; compliance reporting pipeline · Financial Services</div>
+          <div class="case-tools">
+            <span>SQL Server</span><span>Power BI Service</span><span>On-Prem Data Gateway</span><span>DAX</span><span>Power Query</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-block">
+            <div class="lbl">Problem</div>
+            <div class="txt">Regulatory, operational, and executive reports were assembled by hand from on-prem SQL Server, which was slow, error-prone, and hard to audit, with weekly manual exports feeding leadership decks.</div>
+          </div>
+          <div class="case-block">
+            <div class="lbl">Approach</div>
+            <div class="txt">Built an <strong>end-to-end pipeline</strong> from on-prem SQL Server to Power BI Service via the Microsoft On-Premises Data Gateway, with scheduled refreshes, a governed data model, tuned DAX measures, and documented KPI definitions plus reconciliation / QA checks.</div>
+          </div>
+          <div class="case-block">
+            <div class="lbl">Impact</div>
+            <div class="txt">
+              <div class="case-impact">
+                <span class="metric">Zero manual exports</span>
+                <span class="metric">Audit-ready metric definitions</span>
+                <span class="metric">Faster leadership reporting</span>
+                <span class="metric">Fewer reconciliation errors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-head">
+          <div class="case-title">Workflow automation &amp; self-serve documentation · Financial Services</div>
+          <div class="case-tools">
+            <span>Power Automate</span><span>SharePoint</span><span>Power Apps</span><span>Excel</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-block">
+            <div class="lbl">Problem</div>
+            <div class="txt">Routine reporting and operational tasks were done by hand, and documentation like SOPs, KPI definitions, and process flows was scattered across inboxes and local files, making it hard to keep processes consistent and audit-ready.</div>
+          </div>
+          <div class="case-block">
+            <div class="lbl">Approach</div>
+            <div class="txt">Built <strong>automated flows in Power Automate</strong> to remove manual steps like scheduled data routing, notifications, and approval workflows, and created <strong>SharePoint sites</strong> as a central home for documentation, SOPs, KPI definitions, and process flows, so teams work from a single, governed source of truth.</div>
+          </div>
+          <div class="case-block">
+            <div class="lbl">Impact</div>
+            <div class="txt">
+              <div class="case-impact">
+                <span class="metric">Manual effort reduced</span>
+                <span class="metric">Centralised documentation</span>
+                <span class="metric">Consistent, audit-ready processes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="eyebrow">// 04</div>
       <h2>Skills</h2>
       <div class="schema-table">
         <div class="schema-row">
@@ -749,26 +854,26 @@
     </section>
 
     <section id="education">
-      <div class="eyebrow">// 04</div>
+      <div class="eyebrow">// 05</div>
       <h2>Education & Certifications</h2>
       <div class="twocol">
         <div class="card">
           <h4>EDUCATION</h4>
           <div class="edu-item">
             <div class="deg">MSc Business Analytics</div>
-            <div class="school">University of Galway — 2:1 Honours</div>
-            <div class="yr">Sept 2022 — Jul 2023 · Ireland</div>
+            <div class="school">University of Galway · 2:1 Honours</div>
+            <div class="yr">Sept 2022 to Jul 2023 · Ireland</div>
           </div>
           <div class="edu-item">
             <div class="deg">BE, Information Technology</div>
-            <div class="school">KJ Somaiya College of Engineering — 2:1 Honours</div>
-            <div class="yr">Jun 2014 — May 2018 · India</div>
+            <div class="school">KJ Somaiya College of Engineering · 2:1 Honours</div>
+            <div class="yr">Jun 2014 to May 2018 · India</div>
           </div>
         </div>
         <div class="card">
           <h4>CERTIFICATIONS & AWARDS</h4>
           <ul class="cert-list">
-            <li>Advanced SQL — HackerRank</li>
+            <li>Advanced SQL · HackerRank</li>
             <li>Certified Scrum Product Owner (CSPO)</li>
             <li>Certified Scrum Master (CSM)</li>
             <li>Lean Six Sigma Green Belt</li>
@@ -777,11 +882,11 @@
         <div class="card card-full">
           <h4>LEADERSHIP & EXTRACURRICULAR</h4>
           <div class="lead-item">
-            <div class="role">Vice Auditor, Business Analyst Society — University of Galway</div>
+            <div class="role">Vice Auditor, Business Analyst Society · University of Galway</div>
             <div class="org">Ran analytical workshops for 40+ students and organised seminars with industry speakers.</div>
           </div>
           <div class="lead-item">
-            <div class="role">OCM, Indian Society — University of Galway</div>
+            <div class="role">OCM, Indian Society · University of Galway</div>
             <div class="org">Organised 3 traditional and cultural events for 500+ students over the academic year.</div>
           </div>
         </div>
@@ -789,7 +894,7 @@
     </section>
 
     <section id="contact">
-      <div class="eyebrow">// 05</div>
+      <div class="eyebrow">// 06</div>
       <div class="contact-panel">
         <h2 style="justify-content:center;display:flex;">Let's talk data.</h2>
         <p>Open to Data Analyst and BI roles in Ireland and remote. If you've got messy data and a deadline, I'd like to hear about it.</p>
@@ -949,7 +1054,7 @@
   // Resume links point directly to the PDF via href/download attributes in HTML
 
   // Email links: let mailto: fire normally, but also copy the address to the
-  // clipboard and show a confirmation toast — some browsers/in-app webviews
+  // clipboard and show a confirmation toast, since some browsers/in-app webviews
   // (e.g. LinkedIn's, or sandboxed previews) don't have a mail handler wired up,
   // so this guarantees the address is usable either way.
   const toast = document.createElement('div');
@@ -964,7 +1069,7 @@
       try {
         await navigator.clipboard.writeText(email);
       } catch(err) {
-        // clipboard API unavailable — mailto link still attempts to fire on its own
+        // clipboard API unavailable, mailto link still attempts to fire on its own
       }
       toast.classList.add('show');
       clearTimeout(toastTimer);
